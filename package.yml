@@ -1,9 +1,10 @@
 name       : goocanvas1
 version    : 1.0.0
-release    : 1
+release    : 2
 source     :
     - http://ftp.gnome.org/pub/gnome/sources/goocanvas/1.0/goocanvas-1.0.0.tar.gz : 8bd4187f2045080c1f8b6bac135d4231c401e89cb71a30d9c32fd63f4c6245aa
 license    : LGPL-2.0
+component  : desktop.gnome.core
 summary    : GTK+2 Canvas Widget
 description: |
     GooCanvas is a canvas widget for GTK+ that uses the cairo 2D library for drawing.
