@@ -1,9 +1,9 @@
 name       : goocanvas1
 version    : 1.0.0
-release    : 2
+release    : 3
 source     :
-    - http://ftp.gnome.org/pub/gnome/sources/goocanvas/1.0/goocanvas-1.0.0.tar.gz : 8bd4187f2045080c1f8b6bac135d4231c401e89cb71a30d9c32fd63f4c6245aa
-license    : LGPL-2.0
+    - https://download.gnome.org/sources/goocanvas/1.0/goocanvas-1.0.0.tar.bz2 : 1c072ef88567cad241fb4addee26e9bd96741b1503ff736d1c152fa6d865711e
+license    : LGPL-2.0-only
 component  : desktop.gnome.core
 summary    : GTK+2 Canvas Widget
 description: |
