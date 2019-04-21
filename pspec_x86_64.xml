@@ -10,7 +10,7 @@
         <Summary xml:lang="en">GTK+2 Canvas Widget</Summary>
         <Description xml:lang="en">GooCanvas is a canvas widget for GTK+ that uses the cairo 2D library for drawing.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>goocanvas1</Name>
@@ -19,8 +19,11 @@
 </Description>
         <PartOf>desktop.gnome.core</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib64/libgoocanvas.so.3</Path>
+            <Path fileType="library">/usr/lib64/libgoocanvas.so.3.5.0</Path>
+            <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/goocanvas.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/goocanvas.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/goocanvas.mo</Path>
         </Files>
     </Package>
     <Package>
@@ -30,12 +33,29 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">goocanvas1</Dependency>
+            <Dependency release="4">goocanvas1</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvas.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasellipse.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasenumtypes.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasgrid.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasgroup.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasimage.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasitem.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasitemmodel.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasitemsimple.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasmarshal.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvaspath.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvaspolyline.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasrect.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasstyle.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvastable.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvastext.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvasutils.h</Path>
+            <Path fileType="header">/usr/include/goocanvas-1.0/goocanvaswidget.h</Path>
+            <Path fileType="library">/usr/lib64/libgoocanvas.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/goocanvas.pc</Path>
         </Files>
     </Package>
     <Package>
@@ -45,12 +65,58 @@
 </Description>
         <PartOf>programming.docs</PartOf>
         <Files>
-            <Path fileType="doc">/usr/share/gtk-doc/html/</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvas.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasEllipse.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasEllipseModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasGrid.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasGridModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasGroup.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasGroupModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasImage.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasImageModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasItem.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasItemModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasItemModelSimple.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasItemSimple.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasPath.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasPathModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasPolyline.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasPolylineModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasRect.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasRectModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasStyle.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasTable.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasTableModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasText.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasTextModel.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/GooCanvasWidget.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/ch01.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/ch02.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/ch03.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/ch04.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/ch05.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-GooCanvas-Types.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-architecture.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-coordinates.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-creating-items.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-model-view-canvas.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-overview.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-simple-canvas.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas-wysiwyg.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas.devhelp</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/goocanvas.devhelp2</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/home.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/index.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/index.sgml</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/left.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/right.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/style.css</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/goocanvas/up.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2018-04-25</Date>
+        <Update release="4">
+            <Date>2019-04-21</Date>
             <Version>1.0.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
